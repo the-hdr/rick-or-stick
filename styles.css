@@ -1,5 +1,51 @@
-body
+*
 {
     margin: 0;
     padding: 0;
+}
+
+.header
+{
+    height: 20vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game
+{
+    height: 70vh;
+    width: 100vw;
+}
+
+.box-container
+{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.box
+{
+    height: 300px;
+    width: 300px;
+
+    background-color: rgb(205, 154, 252);
+    border: 2px solid black;
+}
+
+.footer
+{
+    height: 10vh;
+    width: 100vw;
+}
+
+.score-container
+{
+    padding-left: 10px;
 }
