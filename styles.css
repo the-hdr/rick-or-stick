@@ -20,7 +20,7 @@
     width: 100vw;
 }
 
-.box-container
+.image-box-container
 {
     display: flex;
     flex-direction: row;
@@ -30,7 +30,7 @@
     gap: 2rem;
 }
 
-.box
+.image-box
 {
     height: 300px;
     width: 300px;
