@@ -29,7 +29,7 @@ function setRandomPicture()
     return randomPictureAddress.includes('rick') ? "rick" : "stick";
 }
 
-function gameLogic()
+function initGame()
 {
     currentPictureName = setRandomPicture();
 }
@@ -51,4 +51,4 @@ function updateScoreAndChangeImage ()
 
 // execution starts here:
 
-gameLogic();
+initGame();
