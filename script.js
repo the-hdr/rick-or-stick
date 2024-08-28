@@ -32,8 +32,6 @@ function setRandomPicture()
 function gameLogic()
 {
     currentPictureName = setRandomPicture();
-
-    alert (currentPictureName);
 }
 
 function updateScoreAndChangeImage ()
