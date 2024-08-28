@@ -18,5 +18,9 @@ function getRandomPictureAddress()
 function setRandomPicture()
 {
     const randomPictureAddress = getRandomPictureAddress();
+    const imageBoxDiv = document.getElementById("image-box");
     
+    imageBoxDiv.inerHTML = "<img src="
+                         + randomPictureAddress
+                         + ">";
 }
