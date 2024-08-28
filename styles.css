@@ -23,7 +23,7 @@
 .image-box-container
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     
     justify-content: center;
     align-items: center;
@@ -32,11 +32,18 @@
 
 .image-box
 {
-    height: 300px;
-    width: 300px;
+    width: 30vw;
+    height: 30vw;
 
     background-color: rgb(205, 154, 252);
     border: 2px solid black;
+}
+
+.button-container
+{
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
 }
 
 .footer

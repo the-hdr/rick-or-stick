@@ -1,3 +1,5 @@
+let currentPictureName = "";
+
 function getRandomPictureAddress()
 {
     // generates a random integer between [0, 1]:
@@ -23,4 +25,18 @@ function setRandomPicture()
     imageBoxDiv.inerHTML = "<img src="
                          + randomPictureAddress
                          + ">";
+
+    return randomPictureAddress[0] == 'r' ? "rick" : "stick";
+}
+
+void gameLogic()
+{
+    currentPictureName = setRandomPicture();
+}
+
+// execution starts here:
+
+while (true)
+{
+    setRandomPicture();
 }
