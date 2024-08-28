@@ -30,13 +30,10 @@
     gap: 2rem;
 }
 
-.image-box
+.game-image
 {
     width: 30vw;
     height: 30vw;
-
-    background-color: rgb(205, 154, 252);
-    border: 2px solid black;
 }
 
 .button-container

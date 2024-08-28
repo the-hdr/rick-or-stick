@@ -9,10 +9,10 @@ function getRandomPictureAddress()
     const filePrefix = directoryName;
 
     // generates a random integer between [1, 10]:
-    const fileIndex = Math.floor(10*Math.random());
+    const fileIndex = 1 + Math.floor(10*Math.random());
 
     const fileName = filePrefix + fileIndex + ".jpg";
-    const filePath = "images" + directoryName + "/" + fileName;
+    const filePath = "images" + "/" + directoryName + "/" + fileName;
 
     return filePath;
 }
@@ -20,23 +20,37 @@ function getRandomPictureAddress()
 function setRandomPicture()
 {
     const randomPictureAddress = getRandomPictureAddress();
-    const imageBoxDiv = document.getElementById("image-box");
-    
-    imageBoxDiv.inerHTML = "<img src="
-                         + randomPictureAddress
-                         + ">";
 
-    return randomPictureAddress[0] == 'r' ? "rick" : "stick";
+    // Update the src attribute of the game-image element
+    const gameImageElement = document.getElementById("game-image");
+    gameImageElement.src = randomPictureAddress;
+
+    // Return the name based on the directory (rick or stick)
+    return randomPictureAddress.includes('rick') ? "rick" : "stick";
 }
 
-void gameLogic()
+function gameLogic()
 {
     currentPictureName = setRandomPicture();
+
+    alert (currentPictureName);
+}
+
+function updateScoreAndChangeImage ()
+{
+    // UPDATING SCORE:
+    const callingButtonClass = this.className;
+    const currentScore = parseInt(document.getElementById("user-score").innerHTML);
+    
+    const currentPictureFullName = currentPictureName + "-button";
+    if (callingButtonClass == currentPictureFullName)
+    {
+        document.getElementById("user-score").innerHTML = 1 + currentScore;
+    }
+    // CHANGE IMAGE:
+    gameLogic();
 }
 
 // execution starts here:
 
-while (true)
-{
-    setRandomPicture();
-}
+gameLogic();

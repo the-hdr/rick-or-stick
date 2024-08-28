@@ -7,9 +7,6 @@
 
     <!-- style sheet: -->
     <link rel="stylesheet" href="styles.css">
-
-    <!-- game logic: -->
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -19,21 +16,22 @@
 
     <div class="game">
         <div class="image-box-container">
-            <div class="image-box">
-                <!-- image goes here  -->
-            </div>
+            <img src="" alt="" id="game-image" class="game-image">
 
             <div class="button-container">
-                <button class="rick-button"> Rick </button>
-                <button class="stick-button"> Stick </button>
+                <button onclick="updateScoreAndChangeImage.call(this)" class="rick-button"> Rick </button>
+                <button onclick="updateScoreAndChangeImage.call(this)" class="stick-button"> Stick </button>
             </div>
         </div>
     </div>
 
     <div class="footer">
         <div class="score-container">
-            Score: <span class="user-score"> 0 </span>
+            Score: <span id="user-score" class="user-score"> 0 </span>
         </div>
     </div>
 </body>
+
+<!-- game logic: -->
+<script src="script.js"></script>
 </html>
