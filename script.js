@@ -46,9 +46,8 @@ function updateScoreAndChangeImage ()
         document.getElementById("user-score").innerHTML = 1 + currentScore;
     }
     // CHANGE IMAGE:
-    gameLogic();
+    initGame();
 }
 
 // execution starts here:
-
 initGame();
